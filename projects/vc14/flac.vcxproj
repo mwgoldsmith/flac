@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|Win32">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|Win32">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|x64">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|x64">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E13295C5-465E-4319-874F-0388CB2430DA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>flac</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\nasm.props" Condition="exists('$(VCTargetsPath)\BuildCustomizations\nasm.props')" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>lib$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>lib$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <TargetName>$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <TargetName>$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>VERSION="1.3.1";_USE_MATH_DEFINES;FLAC__HAS_OGG;FLAC__CPU_IA32;FLAC__SSE_OS;FLAC__HAS_X86INTRIN;FLAC__ALIGN_MALLOC_DATA;FLAC__NO_DLL;FLAC__OVERFLOW_DETECT;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src\libFLAC\include;$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+    </ClCompile>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>liboggd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (all.h assert.h callback.h export.h format.h metadata.h ordinals.h stream_decoder.h stream_encoder.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING.LGPL" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>VERSION="1.3.1";_USE_MATH_DEFINES;FLAC__HAS_OGG;FLAC__CPU_X86_64;FLAC__HAS_X86INTRIN;FLAC__ALIGN_MALLOC_DATA;FLAC__NO_DLL;DEBUG;FLAC__OVERFLOW_DETECT;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src\libFLAC\include;$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>liboggd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (all.h assert.h callback.h export.h format.h metadata.h ordinals.h stream_decoder.h stream_encoder.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING.LGPL" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src\libFLAC\include;$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>VERSION="1.3.1";_USE_MATH_DEFINES;FLAC__HAS_OGG;FLAC__CPU_IA32;FLAC__SSE_OS;FLAC__HAS_X86INTRIN;FLAC__ALIGN_MALLOC_DATA;FLAC__NO_DLL;FLaC__INLINE=_inline;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+    </ClCompile>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (all.h assert.h callback.h export.h format.h metadata.h ordinals.h stream_decoder.h stream_encoder.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING.LGPL" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src\libFLAC\include;$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>VERSION="1.3.1";_USE_MATH_DEFINES;FLAC__HAS_OGG;FLAC__CPU_X86_64;FLAC__HAS_X86INTRIN;FLAC__ALIGN_MALLOC_DATA;FLAC__NO_DLL;FLaC__INLINE=_inline;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (all.h assert.h callback.h export.h format.h metadata.h ordinals.h stream_decoder.h stream_encoder.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING.LGPL" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src\libFLAC\include;$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>VERSION="1.3.1";_USE_MATH_DEFINES;FLAC_API_EXPORTS;FLAC__HAS_OGG;FLAC__CPU_IA32;FLAC__SSE_OS;FLAC__HAS_X86INTRIN;FLAC__ALIGN_MALLOC_DATA;FLAC__OVERFLOW_DETECT;_DEBUG;_WINDOWS;_USRDLL;WIN32;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>oggd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (all.h assert.h callback.h export.h format.h metadata.h ordinals.h stream_decoder.h stream_encoder.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING.LGPL" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src\libFLAC\include;$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>VERSION="1.3.1";_USE_MATH_DEFINES;FLAC_API_EXPORTS;FLAC__HAS_OGG;FLAC__CPU_X86_64;FLAC__HAS_X86INTRIN;FLAC__ALIGN_MALLOC_DATA;FLAC__OVERFLOW_DETECT;_DEBUG;_WINDOWS;_USRDLL;WIN32;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>oggd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (all.h assert.h callback.h export.h format.h metadata.h ordinals.h stream_decoder.h stream_encoder.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING.LGPL" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src\libFLAC\include;$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>VERSION="1.3.1";_USE_MATH_DEFINES;FLAC_API_EXPORTS;FLAC__HAS_OGG;FLAC__CPU_IA32;FLAC__SSE_OS;FLAC__HAS_X86INTRIN;FLAC__ALIGN_MALLOC_DATA;FLaC__INLINE=_inline;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (all.h assert.h callback.h export.h format.h metadata.h ordinals.h stream_decoder.h stream_encoder.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING.LGPL" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src\libFLAC\include;$(ProjectDir)..\include;$(ProjectDir)..\..\include;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>VERSION="1.3.1";_USE_MATH_DEFINES;FLAC_API_EXPORTS;FLAC__HAS_OGG;FLAC__CPU_X86_64;FLAC__HAS_X86INTRIN;FLAC__ALIGN_MALLOC_DATA;FLaC__INLINE=_inline;NDEBUG;_WINDOWS;_USRDLL;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)"
+)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (all.h assert.h callback.h export.h format.h metadata.h ordinals.h stream_decoder.h stream_encoder.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING.LGPL" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\FLAC\all.h" />
+    <ClInclude Include="..\..\include\FLAC\assert.h" />
+    <ClInclude Include="..\..\include\FLAC\callback.h" />
+    <ClInclude Include="..\..\include\FLAC\export.h" />
+    <ClInclude Include="..\..\include\FLAC\format.h" />
+    <ClInclude Include="..\..\include\FLAC\metadata.h" />
+    <ClInclude Include="..\..\include\FLAC\ordinals.h" />
+    <ClInclude Include="..\..\include\FLAC\stream_decoder.h" />
+    <ClInclude Include="..\..\include\FLAC\stream_encoder.h" />
+    <ClInclude Include="..\..\include\share\win_utf8_io.h" />
+    <ClInclude Include="..\..\src\libFLAC\ia32\nasm.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\all.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\bitmath.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\bitreader.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\bitwriter.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\cpu.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\crc.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\fixed.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\float.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\format.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\lpc.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\md5.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\memory.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\metadata.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\ogg_decoder_aspect.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\ogg_encoder_aspect.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\ogg_helper.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\ogg_mapping.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\stream_encoder.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\stream_encoder_framing.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\private\window.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\protected\all.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\protected\stream_decoder.h" />
+    <ClInclude Include="..\..\src\libFLAC\include\protected\stream_encoder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\libFLAC\bitmath.c" />
+    <ClCompile Include="..\..\src\libFLAC\bitreader.c" />
+    <ClCompile Include="..\..\src\libFLAC\bitwriter.c" />
+    <ClCompile Include="..\..\src\libFLAC\cpu.c" />
+    <ClCompile Include="..\..\src\libFLAC\crc.c" />
+    <ClCompile Include="..\..\src\libFLAC\fixed.c" />
+    <ClCompile Include="..\..\src\libFLAC\fixed_intrin_sse2.c" />
+    <ClCompile Include="..\..\src\libFLAC\fixed_intrin_ssse3.c" />
+    <ClCompile Include="..\..\src\libFLAC\float.c" />
+    <ClCompile Include="..\..\src\libFLAC\format.c" />
+    <ClCompile Include="..\..\src\libFLAC\lpc.c" />
+    <ClCompile Include="..\..\src\libFLAC\lpc_intrin_avx2.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\lpc_intrin_sse.c" />
+    <ClCompile Include="..\..\src\libFLAC\lpc_intrin_sse2.c" />
+    <ClCompile Include="..\..\src\libFLAC\lpc_intrin_sse41.c" />
+    <ClCompile Include="..\..\src\libFLAC\md5.c" />
+    <ClCompile Include="..\..\src\libFLAC\memory.c" />
+    <ClCompile Include="..\..\src\libFLAC\metadata_iterators.c" />
+    <ClCompile Include="..\..\src\libFLAC\metadata_object.c" />
+    <ClCompile Include="..\..\src\libFLAC\ogg_decoder_aspect.c" />
+    <ClCompile Include="..\..\src\libFLAC\ogg_encoder_aspect.c" />
+    <ClCompile Include="..\..\src\libFLAC\ogg_helper.c" />
+    <ClCompile Include="..\..\src\libFLAC\ogg_mapping.c" />
+    <ClCompile Include="..\..\src\libFLAC\stream_decoder.c" />
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder.c" />
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder_framing.c" />
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder_intrin_avx2.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">/arch:AVX %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder_intrin_sse2.c" />
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder_intrin_ssse3.c" />
+    <ClCompile Include="..\..\src\libFLAC\window.c" />
+    <ClCompile Include="..\..\src\share\win_utf8_io\win_utf8_io.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\libFLAC\ia32\cpu_asm.nasm">
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">ia32/cpu_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">ia32/cpu_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">ia32/cpu_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">ia32/cpu_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/cpu_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ia32/cpu_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/cpu_asm.nasm -o ia32/cpu_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/cpu_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ia32/cpu_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ia32/cpu_asm.obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\libFLAC\ia32\fixed_asm.nasm">
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">ia32/fixed_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">ia32/fixed_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">ia32/fixed_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">ia32/fixed_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/fixed_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ia32/fixed_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/fixed_asm.nasm -o ia32/fixed_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/fixed_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ia32/fixed_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ia32/fixed_asm.obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\libFLAC\ia32\lpc_asm.nasm">
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">ia32/lpc_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">ia32/lpc_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">ia32/lpc_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">ia32/lpc_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/lpc_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ia32/lpc_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nasm.exe -f win32 -d OBJ_FORMAT_win32 -i ia32/ ia32/lpc_asm.nasm -o ia32/lpc_asm.obj
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/lpc_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ia32/lpc_asm.nasm;ia32/nasm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ia32/lpc_asm.obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\nasm.targets" Condition="exists('$(VCTargetsPath)\BuildCustomizations\nasm.targets')" />
+  </ImportGroup>
+</Project>

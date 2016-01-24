@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\FLAC">
+      <UniqueIdentifier>{46a3ad58-28a7-4680-86c2-429d73ab8604}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\libFLAC">
+      <UniqueIdentifier>{0ff6e6bb-0a58-4b5d-b9f2-1ae9661430d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\libFLAC\private">
+      <UniqueIdentifier>{ca3d0f4b-f1a0-457c-95e4-6805b21ee94d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\libFLAC\protected">
+      <UniqueIdentifier>{925307d4-e948-48db-82d0-0a6ac3394022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\libFLAC\ia32">
+      <UniqueIdentifier>{aa21cd3a-a930-4020-b703-c90b8e404835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ia32">
+      <UniqueIdentifier>{1ac97be6-2c55-4faf-b90d-853d2bbd637b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\libFLAC\bitmath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\bitreader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\bitwriter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\cpu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\crc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\fixed.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\fixed_intrin_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\fixed_intrin_ssse3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\float.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\format.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\lpc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\lpc_intrin_avx2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\lpc_intrin_sse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\lpc_intrin_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\lpc_intrin_sse41.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\md5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\metadata_iterators.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\metadata_object.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\ogg_decoder_aspect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\ogg_encoder_aspect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\ogg_helper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\ogg_mapping.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\stream_decoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder_framing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder_intrin_avx2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder_intrin_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\stream_encoder_intrin_ssse3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\libFLAC\window.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\share\win_utf8_io\win_utf8_io.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\libFLAC\include\protected\all.h">
+      <Filter>Header Files\libFLAC\protected</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\all.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\all.h">
+      <Filter>Header Files\FLAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\assert.h">
+      <Filter>Header Files\FLAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\bitmath.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\callback.h">
+      <Filter>Header Files\FLAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\export.h">
+      <Filter>Header Files\FLAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\format.h">
+      <Filter>Header Files\FLAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\metadata.h">
+      <Filter>Header Files\FLAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\bitreader.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\bitwriter.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\cpu.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\crc.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\fixed.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\float.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\format.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\lpc.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\md5.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\memory.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\metadata.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\ia32\nasm.h">
+      <Filter>Header Files\libFLAC\ia32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\ordinals.h">
+      <Filter>Header Files\FLAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\protected\stream_encoder.h">
+      <Filter>Header Files\libFLAC\protected</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\protected\stream_decoder.h">
+      <Filter>Header Files\libFLAC\protected</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\ogg_mapping.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\ogg_helper.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\ogg_encoder_aspect.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\ogg_decoder_aspect.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\stream_decoder.h">
+      <Filter>Header Files\FLAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\stream_encoder_framing.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\FLAC\stream_encoder.h">
+      <Filter>Header Files\FLAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\stream_encoder.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libFLAC\include\private\window.h">
+      <Filter>Header Files\libFLAC\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\share\win_utf8_io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\libFLAC\ia32\lpc_asm.nasm">
+      <Filter>Source Files\ia32</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\libFLAC\ia32\fixed_asm.nasm">
+      <Filter>Source Files\ia32</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\src\libFLAC\ia32\cpu_asm.nasm">
+      <Filter>Source Files\ia32</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
